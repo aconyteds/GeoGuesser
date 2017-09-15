@@ -1,0 +1,68 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.geo-guesser {
+  .left-container {
+    padding: 5px;
+    width: 400px;
+  }
+
+  .title-container {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .main-game {}
+
+  content.map-container {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .question {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  #viewDiv {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: $body-bg;
+  z-index: 999;
+
+  & > * {
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    & > * {
+      text-align: center;
+      vertical-align: middle;
+      display: table-cell;
+      font-size: 4em;
+    }
+  }
+}
+/*
+  * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
+  * for the full set of master styles used by the documentation samples
+  */

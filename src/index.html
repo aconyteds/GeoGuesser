@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <title>GeoGuesser</title>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//js.arcgis.com/4.4/esri/css/main.css">
+  <link rel="stylesheet" href="css/flat/flat.css">
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet'>
+  <!-- 1. Load libraries -->
+  <!-- load SystemJS library -->
+  <!-- <script src="node_modules/systemjs/dist/system.src.js"></script> -->
+  <!-- IE required polyfill -->
+  <!-- dojo config -->
+  <script src="./dojoConfig.js"></script>
+  <script src="/node_modules/dojo/dojo.js"></script>
+  <!-- load esri-system-js library -->
+  <!-- <script src="node_modules/esri-system-js/dist/esriSystem.js"></script> -->
+  <!-- 2. Load our 'modules' -->
+  <!-- <script defer src="systemjs.config.js"></script> -->
+
+  <!-- <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script> -->
+  <script defer src="./main.js"></script>
+</head>
+<!-- 3. Display the application -->
+
+<body class="geo-guesser flat">
+  <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-type="design:'sidebar', gutters:false" style="height:100%; width:100%;">
+
+    <left data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left', gutters:false" class="left-container">
+      <div class="container-fluid">
+        <div class="row title-container">
+          <h1>GeoGuesser</h1>
+        </div>
+        <div id="gameContainer"></div>
+      </div>
+    </left>
+    <content data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center', gutters:false" class="map-container">
+      <div id="viewDiv"></div>
+    </content>
+  </div>
+  <loader class="loader">
+    <div><span>Loading...</span></div>
+  </loader>
+  <!-- <script src="js/main.js"></script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<div class="${baseClass}">
+  <h3 class="col-12">${question.task}</h3>
+  <ol data-dojo-attach-point="hintContainer" class="alert alert-info">
+  </ol>
+  <form class="form-inline" data-dojo-attach-point="form">
+    <div class="input-group col-12">
+      <input name="answer" id="${id}_answer" class="form-control" placeholder='${placeholder}' data-dojo-attach-point="answer" />
+      <span class="input-group-btn">
+        <button class="btn btn-primary" data-dojo-attach-event="onclick:_answer">Answer</button>
+      </span>
+    </div>
+  </form>
+  <div data-dojo-attach-point="timer"></div>
+</div>
